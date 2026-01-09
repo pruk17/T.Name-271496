@@ -15,7 +15,7 @@ class Hearer2Subscriber(Node):
 
     def listener_callback(self, msg):
         # Show in terminal: SUB2 get <topic>
-        self.get_logger().info(f'SUB2 get /gossip_660610817: "{msg.data}"')
+        self.get_logger().info(f'SUB1 get: "{self.subscription.topic_name}" "{msg.data}"')
 
 def main(args=None):
     rclpy.init(args=args)

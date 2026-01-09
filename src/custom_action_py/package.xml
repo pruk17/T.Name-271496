@@ -1,23 +1,25 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>assign2_660610817</name>
+  <name>custom_action_py</name>
   <version>0.0.0</version>
-  <description>Assignment 2 for 271496</description>
+  <description>This pkg only for "create action ndoe" practice </description>
   <maintainer email="chaiyapruk6494@gmail.com">chaiyapruk</maintainer>
   <license>Apache-2.0</license>
 
-  <exec_depend>rclpy</exec_depend>
-  <exec_depend>std_msgs</exec_depend>
-  <exec_depend>ros2launch</exec_depend>
-  
-  <depend>rcl_interfaces</depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <exec_depend>custom_action_interfaces</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
   <test_depend>python3-pytest</test_depend>
-  
+
   <export>
     <build_type>ament_python</build_type>
   </export>

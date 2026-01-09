@@ -3,6 +3,8 @@ from rclpy.node import Node
 from std_msgs.msg import String
 from rcl_interfaces.msg import ParameterDescriptor
 
+#ros2 run rqt_reconfigure rqt_reconfigure (use to see the parameter of nodes and adjust it)
+
 class WhisperPublisher(Node):
     def __init__(self):
         # Initialize node with name 

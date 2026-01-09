@@ -1,9 +1,8 @@
 from setuptools import find_packages, setup
-
 import os
 from glob import glob
 
-package_name = 'assign2_660610817'
+package_name = 'pruk_lidar_a1'
 
 setup(
     name=package_name,
@@ -13,18 +12,16 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', package_name, 'launch'), glob('launch/*'))
+        (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
     ],
-    
     install_requires=['setuptools',
-                      'rclpy',      # Essential for ROS2 Python
-                      'std_msgs',   # Essential for String messages
+                      'rclpy',      # ROS2 Python
                       'rcl_interfaces',
-    ],
+                      ],
     zip_safe=True,
     maintainer='chaiyapruk',
     maintainer_email='chaiyapruk6494@gmail.com',
-    description='Assignment 2 for 271496',
+    description='get the value from lidar A1 scanning and find length on angle 0 +- 5 degree',
     license='Apache-2.0',
     extras_require={
         'test': [
@@ -33,9 +30,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'talker = assign2_660610817.whisper_660610817:main',
-            'listener1 = assign2_660610817.hearer1_660610817:main',
-            'listener2 = assign2_660610817.hearer2_660610817:main',
+            'ld_read = pruk_lidar_a1.lidar_reader:main', 
         ],
     },
 )
