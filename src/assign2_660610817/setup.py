@@ -36,6 +36,8 @@ setup(
             'talker = assign2_660610817.whisper_660610817:main',
             'listener1 = assign2_660610817.hearer1_660610817:main',
             'listener2 = assign2_660610817.hearer2_660610817:main',
+            'teleop_honomic = assign2_660610817.teleop_holonomic:main',
+            'cam_teleop = assign2_660610817.cam_teleop:main',
         ],
     },
 )
